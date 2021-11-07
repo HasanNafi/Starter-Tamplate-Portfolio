@@ -80,6 +80,29 @@ img {
     box-shadow: var(--outer-shadow);
 }
 
+.hover-in-shadow {
+    position: relative;
+    z-index: 1;
+}
+
+.hover-in-shadow:hover {
+    box-shadow: var(--outer-shadow-0);
+}
+
+.hover-in-shadow:after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.hover-in-shadow:hover:after {
+    box-shadow: var(--inner-shadow);
+}
+
 
 /* ==============header section============= */
 
@@ -112,6 +135,13 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.header .hamburger-btn::after {
+    border-radius: 50%;
 }
 
 .header .hamburger-btn span {
