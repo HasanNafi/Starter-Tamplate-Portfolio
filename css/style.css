@@ -277,6 +277,17 @@ img {
     background-color: rgb(230, 61, 61);
 }
 
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 
 /* ==============header section============= */
 
@@ -592,6 +603,12 @@ img {
 .about-section .tab-content {
     flex: 0 0 100%;
     max-width: 100%;
+    display: none;
+}
+
+.about-section .tab-content.active {
+    display: block;
+    animation: fadeInTop 1s ease;
 }
 
 .about-section .skills .skill-item {
@@ -639,6 +656,7 @@ img {
 
 /* experince part start */
 
+.about-section .education,
 .about-section .experience {
     padding-bottom: 80px;
     margin-top: 3rem;
