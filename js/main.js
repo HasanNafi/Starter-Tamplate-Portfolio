@@ -171,3 +171,52 @@ function bodyScrollingToggle() {
         }
     }
 })();
+
+// ====================testimonial slider=====================================================
+(() => {
+    const sliderContainer = document.querySelector(".testi-slider-container"),
+        slides = sliderContainer.querySelectorAll(".testi-item"),
+        slideWidth = sliderContainer.offsetWidth,
+        prevBtn = document.querySelector(".testi-slider-nav .prev"),
+        nextBtn = document.querySelector(".testi-slider-nav .next"),
+        activeSlide = sliderContainer.querySelector(".testi-item.active");
+    let slideIndex = Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
+
+    // set width of all slide
+    slides.forEach((slide) => {
+        slide.style.width = slideWidth + "px";
+    })
+
+    // set width of slide container
+    sliderContainer.style.width = slideWidth * slides.length + "px";
+
+    //========================== slide bar carosoul=======================
+    // next slide
+    nextBtn.addEventListener("click", () => {
+        if (slideIndex === slides.length - 1) {
+            slideIndex = 0;
+        } else {
+            slideIndex++;
+        }
+        slider();
+    })
+
+    // previous slide
+    prevBtn.addEventListener("click", () => {
+        if (slideIndex === 0) {
+            slideIndex = slides.length - 1;
+        } else {
+            slideIndex--;
+        }
+        slider();
+    })
+
+    function slider() {
+        // deactivate existing active slide
+        sliderContainer.querySelector(".testi-item.active").classList.remove("active");
+        // active new slides
+        slides[slideIndex].classList.add("active");
+        sliderContainer.style.marginLeft = -(slideWidth * slideIndex) + "px";
+    }
+    slider();
+})();
