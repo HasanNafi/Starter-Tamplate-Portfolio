@@ -128,6 +128,7 @@ img {
     border-radius: 30px;
     transform: all 0.3s ease;
     display: inline-block;
+    border: none;
 }
 
 .btn-1::after {
@@ -1314,3 +1315,97 @@ img {
 .testimonial-section .testi-slider-nav span i {
     line-height: 40px;
 }
+
+
+/* ==================================contact section start==================================== */
+
+.contact-section {
+    padding: 80px 0 80px;
+    min-height: 100vh;
+}
+
+.contact-section .contact-item {
+    flex: 0 0 33.33%;
+    max-height: 33.33%;
+    padding: 15px;
+    display: flex;
+}
+
+.contact-section .contact-item-inner {
+    text-align: center;
+    padding: 30px 15px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-section .contact-item-inner i {
+    font-size: 25px;
+    color: var(--skin-color);
+}
+
+.contact-section .contact-item-inner span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-black-700);
+    margin: 10px 0 5px;
+    text-transform: capitalize;
+}
+
+.contact-section .contact-item-inner p {
+    font-size: 16px;
+    color: var(--text-black-600);
+    line-height: 26px;
+    margin: 0;
+    word-break: break-word;
+}
+
+.contact-section .contact-form {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.contact-section .w-50 {
+    padding: 0 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.contact-section .input-group {
+    margin: 0 0 25px;
+    transition: all 0.3s ease-in;
+    border-radius: 30px;
+}
+
+.contact-section .input-group::after {
+    border-radius: 30px;
+}
+
+.contact-section .input-group .input-control {
+    height: 45px;
+    display: block;
+    width: 100%;
+    border-radius: 30px;
+    border: none;
+    padding-left: 25px;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 0 15px;
+    color: var(--text-black-700);
+}
+
+.contact-section .input-group textarea.input-control {
+    height: 184px;
+    padding-top: 15px;
+    resize: none;
+}
+
+.contact-section .contact-form .submit-btn {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: left;
+    padding: 0 15px;
+}
+
+
+/* ==================================contact section end==================================== */
